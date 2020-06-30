@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='waves.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}" type="text/css">
+    <title>Turn on the light!</title>
+</head>
+
+<body>
+    <header>
+        <h1>Click to turn on the light</h1>
+    </header>
+    <div id="container">
+        <div class="center">
+            <ul>
+                <li><a href="/on" id="cntrl" class="button">Turn on!</a></li>
+                <div class="unhide">
+                    <li><a class="button" href="">Set Alarm</a></li>
+                    <div class="hidden">
+                        <form action="" method="POST" novalidate>
+                            <li>{{ form.time }}</li>
+                            <li>{{ form.submit(class='button') }}</li>
+                        </form>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='waves.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='script.js')}}"></script>
+</body>
+
+</html>
